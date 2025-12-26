@@ -147,7 +147,7 @@ python main.py
 
 ```bash
 # Убедитесь, что файл .env находится в корневой папке проекта
-docker-compose up --build
+docker-compose --env-file .\.env  up --build
 ```
 
 Команды для управления:
