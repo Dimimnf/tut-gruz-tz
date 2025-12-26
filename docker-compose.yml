@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  # Backend API (FastAPI)
+  backend:
+    build:
+      context: ./tut-gruz-back
+      dockerfile: Dockerfile
+    container_name: tut-gruz-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MODE=${MODE:-DEV}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - WEB_HOST=${WEB_HOST}
+      - WEB_BACK=${WEB_BACK}
+    volumes:
+      - ./tut-gruz-back/src:/app/src
+    networks:
+      - tut-gruz-network
+    restart: unless-stopped
+
+  # Telegram Bot
+  bot:
+    build:
+      context: ./tut-gruz-bot
+      dockerfile: Dockerfile
+    container_name: tut-gruz-bot
+    environment:
+      - MODE=${MODE:-DEV}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - WEB_HOST=${WEB_HOST}
+      - WEB_BACK=${WEB_BACK}
+    depends_on:
+      - backend
+    networks:
+      - tut-gruz-network
+    restart: unless-stopped
+
+  # Frontend (React + Vite)
+  frontend:
+    build:
+      context: ./tut-gruz-front
+      dockerfile: Dockerfile
+    container_name: tut-gruz-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API=${VITE_API}
+      - VITE_MODE=${VITE_MODE:-DEV}
+    volumes:
+      - ./tut-gruz-front/src:/app/src
+      - ./tut-gruz-front/public:/app/public
+    networks:
+      - tut-gruz-network
+    restart: unless-stopped
+
+  # User API Client (Telethon)
+  client:
+    build:
+      context: ./tut-gruz-client
+      dockerfile: Dockerfile
+    container_name: tut-gruz-client
+    environment:
+      - MODE=${MODE:-DEV}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - APP_ID=${APP_ID}
+      - APP_HASH=${APP_HASH}
+      - PHONE_NUMBER=${PHONE_NUMBER}
+    volumes:
+      - ./tut-gruz-client:/app
+      - tut-gruz-client-sessions:/app/.sessions
+    networks:
+      - tut-gruz-network
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+networks:
+  tut-gruz-network:
+    driver: bridge
+
+volumes:
+  tut-gruz-client-sessions:
+    driver: local

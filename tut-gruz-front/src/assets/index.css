@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --text-9xl: clamp(4.8rem, 3.984rem + 4.02vw, 8rem);
+  --text-8xl: clamp(3.6rem, 2.988rem + 3.01vw, 6rem);
+  --text-7xl: clamp(2.688rem, 2.225rem + 2.27vw, 4.5rem);
+  --text-6xl: clamp(1.875rem, 1.397rem + 2.35vw, 3.75rem);
+  --text-5xl: clamp(1.563rem, 1.196rem + 1.8vw, 3rem);
+  --text-4xl: clamp(1.35rem, 1.121rem + 1.13vw, 2.25rem);
+  --text-3xl: clamp(1.125rem, 0.934rem + 0.94vw, 1.875rem);
+  --text-2xl: clamp(0.9rem, 0.747rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(0.75rem, 0.623rem + 0.63vw, 1.25rem);
+  --text-lg: clamp(0.625rem, 0.498rem + 0.63vw, 1.125rem);
+  --text-base: clamp(0.6rem, 0.498rem + 0.5vw, 1rem);
+  --text-sm: clamp(0.525rem, 0.436rem + 0.44vw, 0.875rem);
+  --text-xs: clamp(0.45rem, 0.374rem + 0.38vw, 0.75rem);
+}
+
+.my_custom_container {
+  @apply container mx-auto pt-0;
+}

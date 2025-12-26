@@ -1,0 +1,45 @@
+2025-12-26 15:25:07 - telegram_client - ERROR - Неожиданная ошибка: 'Settings' object has no attribute 'API_ID'
+Traceback (most recent call last):
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-client\main.py", line 95, in <module>
+    asyncio.run(main())
+  File "C:\Users\Dmitrii\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-client\main.py", line 77, in main
+    app = TelegramAutoResponder()
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-client\main.py", line 19, in __init__
+    self.auth_manager = AuthManager()
+                        ^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-client\auth.py", line 21, in __init__
+    settings.API_ID,
+    ^^^^^^^^^^^^^^^
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-client\.venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'API_ID'. Did you mean: 'APP_ID'?
+2025-12-26 15:25:34 - telegram_client - INFO - ============================================================
+2025-12-26 15:25:34 - telegram_client - INFO - Запуск Telegram Auto Responder
+2025-12-26 15:25:34 - telegram_client - INFO - ============================================================
+2025-12-26 15:25:36 - telegram_client - INFO - Подключение к Telegram установлено
+2025-12-26 15:25:36 - telegram_client - INFO - Начало авторизации для +79214313886
+2025-12-26 15:25:36 - telegram_client - INFO - Код подтверждения отправлен
+2025-12-26 15:26:03 - telegram_client - INFO - Успешная авторизация: Дмитрий (@Guffwer)
+2025-12-26 15:26:03 - telegram_client - INFO - Обработчики сообщений зарегистрированы
+2025-12-26 15:26:03 - telegram_client - INFO - ============================================================
+2025-12-26 15:26:03 - telegram_client - INFO - Клиент запущен и слушает сообщения...
+2025-12-26 15:26:03 - telegram_client - INFO - Триггерная фраза: 'приветAPP'
+2025-12-26 15:26:03 - telegram_client - INFO - Нажмите Ctrl+C для остановки
+2025-12-26 15:26:03 - telegram_client - INFO - ============================================================
+2025-12-26 15:26:42 - telegram_client - INFO - Отправлен ответ пользователю 738574104 (@daniyl_montego): https://t.me/tutGruzTzbot
+2025-12-26 15:27:28 - telegram_client - INFO - Отправлен ответ пользователю 738574104 (@daniyl_montego): https://t.me/tutGruzTzbot
+2025-12-26 15:29:10 - telegram_client - INFO - Отправлен ответ пользователю 738574104 (@daniyl_montego): https://t.me/tutGruzTzbot
+2025-12-26 15:29:13 - telegram_client - INFO - Кулдаун активен для пользователя 738574104 (@daniyl_montego)
+2025-12-26 15:29:15 - telegram_client - INFO - Кулдаун активен для пользователя 738574104 (@daniyl_montego)
+2025-12-26 15:58:50 - telegram_client - INFO - 
+Получен сигнал 2

@@ -1,0 +1,83 @@
+2025-12-26 14:38:57,338 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 14:38:57,346 - INFO - __main__ - Request completed: 200
+2025-12-26 15:03:48,851 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=40ft_reefer
+2025-12-26 15:03:48,948 - ERROR - src.exception_handlers - 500 Internal Server Error: GET https://localhost:8000/containers?type=40ft_reefer
+Traceback (most recent call last):
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back/src/main.py", line 24, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\fastapi\routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\fastapi\routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\fastapi\routing.py", line 416, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 676, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\src\dependencies.py", line 15, in verify_user
+    res = safe_parse_webapp_init_data(settings.BOT_TOKEN, x_init_data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Dmitrii\Desktop\GIT\tut-gruz-tz\tut-gruz-back\.venv\Lib\site-packages\aiogram\utils\web_app.py", line 187, in safe_parse_webapp_init_data
+    raise ValueError(msg)
+ValueError: Invalid init data signature
+2025-12-26 15:05:33,125 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=40ft_reefer
+2025-12-26 15:05:33,129 - INFO - __main__ - Request completed: 200
+2025-12-26 15:06:22,949 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 15:06:22,950 - INFO - __main__ - Request completed: 200
+2025-12-26 15:06:25,528 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 15:06:25,529 - INFO - __main__ - Request completed: 200
+2025-12-26 15:06:39,700 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 15:06:39,703 - INFO - __main__ - Request completed: 200
+2025-12-26 15:06:55,714 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 15:06:55,715 - INFO - __main__ - Request completed: 200
+2025-12-26 15:37:37,091 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 15:37:37,105 - INFO - __main__ - Request completed: 200
+2025-12-26 15:37:39,805 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 15:37:39,806 - INFO - __main__ - Request completed: 200
+2025-12-26 15:43:37,078 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 15:43:37,079 - INFO - __main__ - Request completed: 200
+2025-12-26 15:52:31,504 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 15:52:31,602 - INFO - __main__ - Request completed: 200
+2025-12-26 15:59:56,011 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 15:59:56,026 - INFO - __main__ - Request completed: 200
