@@ -81,3 +81,15 @@ ValueError: Invalid init data signature
 2025-12-26 15:52:31,602 - INFO - __main__ - Request completed: 200
 2025-12-26 15:59:56,011 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
 2025-12-26 15:59:56,026 - INFO - __main__ - Request completed: 200
+2025-12-26 16:56:13,171 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 16:56:13,178 - INFO - __main__ - Request completed: 200
+2025-12-26 17:00:22,448 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 17:00:22,462 - INFO - __main__ - Request completed: 200
+2025-12-26 17:01:29,880 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers?type=20ft
+2025-12-26 17:01:29,883 - INFO - __main__ - Request completed: 200
+2025-12-26 17:16:24,179 - INFO - __main__ - Incoming request: GET https://localhost:8000/containers/20ft-001
+2025-12-26 17:16:24,184 - INFO - __main__ - Request completed: 200
+2025-12-26 17:16:24,930 - INFO - __main__ - Incoming request: GET https://localhost:8000/static/20ft/001_inside.jpg
+2025-12-26 17:16:24,985 - INFO - __main__ - Request completed: 200
+2025-12-26 17:16:24,989 - INFO - __main__ - Incoming request: GET https://localhost:8000/static/20ft/001_preview.jpg
+2025-12-26 17:16:24,991 - INFO - __main__ - Request completed: 200

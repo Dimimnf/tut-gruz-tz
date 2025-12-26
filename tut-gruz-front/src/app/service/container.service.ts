@@ -1,12 +1,14 @@
 import { queryOptions } from "@tanstack/react-query";
 import httpService from "./http.service";
 import type { IContainer, IContainerFilters } from "../../interface";
-// Интерфейс контейнера на основе модели бэкенда
 
-
-
-
+const API_URL = import.meta.env.VITE_API;
 const containersEndPoint = "/containers";
+
+const prependImageUrls = (container: IContainer): IContainer => ({
+    ...container,
+    images: container.images?.map((img) => `${API_URL}${img}`) ?? [],
+});
 
 const getOneContainer = async (
     containerId: string,
@@ -16,7 +18,7 @@ const getOneContainer = async (
         `${containersEndPoint}/${containerId}`,
         config
     );
-    return data;
+    return prependImageUrls(data);
 };
 
 const getAllContainers = async (
@@ -36,7 +38,7 @@ const getAllContainers = async (
         url += `?${params.toString()}`;
     }
     const { data } = await httpService.get<IContainer[]>(`${url}`, config);
-    return data;
+    return data.map(prependImageUrls);
 };
 
 export const containersService = {

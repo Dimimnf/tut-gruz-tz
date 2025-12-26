@@ -10,9 +10,8 @@
       "short_description": "20-футовый контейнер, б/у, хорошее состояние.",
       "description": "Стандартный 20-футовый контейнер. Подходит для хранения и перевозки. Есть следы эксплуатации.",
       "images": [
-        "/static/images/20ft/001_preview.jpg",
-        "/static/images/20ft/001_inside.jpg",
-        "/static/images/20ft/001_outside.jpg"
+        "/static/20ft/001_preview.jpg",
+        "/static/20ft/001_inside.jpg"
       ]
     },
     {
@@ -25,24 +24,8 @@
       "short_description": "20-футовый контейнер, б/у.",
       "description": "20-футовый морской контейнер в рабочем состоянии. Герметичный, замки исправны.",
       "images": [
-        "/static/images/20ft/002_preview.jpg",
-        "/static/images/20ft/002_inside.jpg",
-        "/static/images/20ft/002_outside.jpg"
-      ]
-    },
-    {
-      "id": "20ft-003",
-      "type": "20ft",
-      "title": "20’ Standard №3",
-      "slug": "20ft-003",
-      "price": 2300,
-      "currency": "EUR",
-      "short_description": "20-футовый контейнер, отличное состояние.",
-      "description": "Контейнер после косметического обслуживания. Подходит под склад или стройку.",
-      "images": [
-        "/static/images/20ft/003_preview.jpg",
-        "/static/images/20ft/003_inside.jpg",
-        "/static/images/20ft/003_outside.jpg"
+        "/static/20ft/002_preview.jpg",
+        "/static/20ft/002_inside.jpg"
       ]
     },
 
@@ -56,9 +39,8 @@
       "short_description": "40-футовый High Cube, увеличенная высота.",
       "description": "Контейнер High Cube с увеличенной высотой. Отлично подходит для объемных грузов.",
       "images": [
-        "/static/images/40hc/001_preview.jpg",
-        "/static/images/40hc/001_inside.jpg",
-        "/static/images/40hc/001_outside.jpg"
+        "/static/40hc/001_preview.jpg",
+        "/static/40hc/001_inside.jpg"
       ]
     },
     {
@@ -71,24 +53,8 @@
       "short_description": "40-футовый HC, б/у.",
       "description": "High Cube контейнер с нормальным состоянием пола и стен.",
       "images": [
-        "/static/images/40hc/002_preview.jpg",
-        "/static/images/40hc/002_inside.jpg",
-        "/static/images/40hc/002_outside.jpg"
-      ]
-    },
-    {
-      "id": "40hc-003",
-      "type": "40ft_hc",
-      "title": "40’ High Cube №3",
-      "slug": "40hc-003",
-      "price": 4100,
-      "currency": "EUR",
-      "short_description": "40-футовый High Cube, усиленный.",
-      "description": "Усиленный HC контейнер, подходит под интенсивную эксплуатацию.",
-      "images": [
-        "/static/images/40hc/003_preview.jpg",
-        "/static/images/40hc/003_inside.jpg",
-        "/static/images/40hc/003_outside.jpg"
+        "/static/40hc/002_preview.jpg",
+        "/static/40hc/002_inside.jpg"
       ]
     },
 
@@ -102,9 +68,8 @@
       "short_description": "Рефрижераторный контейнер, б/у.",
       "description": "Рефрижератор с рабочей холодильной установкой. Поддерживает стабильную температуру.",
       "images": [
-        "/static/images/40reefer/001_preview.jpg",
-        "/static/images/40reefer/001_inside.jpg",
-        "/static/images/40reefer/001_outside.jpg"
+        "/static/40reefer/001_preview.jpg",
+        "/static/40reefer/001_inside.jpg"
       ]
     },
     {
@@ -117,24 +82,8 @@
       "short_description": "40-футовый рефрижератор, обслужен.",
       "description": "Контейнер прошел техническое обслуживание, готов к эксплуатации.",
       "images": [
-        "/static/images/40reefer/002_preview.jpg",
-        "/static/images/40reefer/002_inside.jpg",
-        "/static/images/40reefer/002_outside.jpg"
-      ]
-    },
-    {
-      "id": "40rf-003",
-      "type": "40ft_reefer",
-      "title": "40’ Reefer №3",
-      "slug": "40rf-003",
-      "price": 9200,
-      "currency": "EUR",
-      "short_description": "Рефрижераторный контейнер, отличное состояние.",
-      "description": "Рефрижераторный контейнер с минимальным износом, полностью готов к работе.",
-      "images": [
-        "/static/images/40reefer/003_preview.jpg",
-        "/static/images/40reefer/003_inside.jpg",
-        "/static/images/40reefer/003_outside.jpg"
+        "/static/40reefer/002_preview.jpg",
+        "/static/40reefer/002_inside.jpg"
       ]
     }
   ]

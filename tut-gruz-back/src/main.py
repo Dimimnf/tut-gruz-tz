@@ -1,4 +1,7 @@
+from pathlib import Path
+
 from fastapi import FastAPI, Request
+from fastapi.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn
 import logging
@@ -12,7 +15,11 @@ from src.exception_handlers import (
 setup_logging()
 logger = logging.getLogger(__name__)
 
+STATIC_DIR = Path(__file__).parent / "static"
+
 app = FastAPI(title="backend tut-gruz", redirect_slashes=False)
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 app.add_exception_handler(404, not_found_error_handler)
 app.add_exception_handler(Exception, internal_server_error_handler)
