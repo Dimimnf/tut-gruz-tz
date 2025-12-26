@@ -24,7 +24,7 @@ tut-gruz-tz/
 - Менеджер пакетов `uv` (рекомендуется) или `pip`
 
 ### Frontend
-- Node.js v18+
+- Node.js v20+
 - npm или yarn
 
 ### Конфигурация
@@ -169,7 +169,7 @@ docker-compose logs -f frontend
 docker-compose logs -f client
 
 # Перестроение образов
-docker-compose up --build
+docker-compose --env-file .\.env  up --build
 ```
 
 **Порты после запуска:**
